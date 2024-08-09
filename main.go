@@ -89,6 +89,14 @@ func main() {
 					newkey = strings.ReplaceAll(newkey, "/", "_or_")
 				}
 
+				if strings.Contains(newkey, "(") {
+					newkey = strings.ReplaceAll(newkey, "(", "_")
+				}
+
+				if strings.Contains(newkey, ")") {
+					newkey = strings.ReplaceAll(newkey, ")", "_")
+				}
+
 				if strings.Contains(newkey, "?") {
 					newkey = strings.ReplaceAll(newkey, "?", "_or_")
 				}
